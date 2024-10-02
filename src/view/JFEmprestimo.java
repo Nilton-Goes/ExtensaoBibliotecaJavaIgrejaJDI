@@ -18,10 +18,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import utils.BdCliente;
+import utils.BdIrmaos;
 import utils.BdEmprestimo;
 import utils.BdLivro;
-import model.Cliente;
+import model.Irmaos;
 import model.Emprestimo;
 import model.Livro;
 
@@ -32,7 +32,7 @@ import model.Livro;
  */
 public class JFEmprestimo extends javax.swing.JFrame {  
    
-    JFMulta enviaValor;
+    JFAviso enviaValor;
     private JFPrincipal telaPrincipal;
     boolean verifica = false;
     
@@ -118,7 +118,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
         jLabel1.setText("ID: ");
 
-        jLabel2.setText("ID do cliente: ");
+        jLabel2.setText("ID do Irmão(a): ");
 
         jLabel3.setText("ID do livro: ");
 
@@ -195,7 +195,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTableEmprestimo);
 
         bGPesquisa.add(jRClientes);
-        jRClientes.setText("Clientes");
+        jRClientes.setText("Irmão(a)");
 
         bGPesquisa.add(jRLivros);
         jRLivros.setText("Livros");
@@ -218,7 +218,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jTableCliente);
 
-        jLabel8.setText("Selecione o cliente abaixo: ");
+        jLabel8.setText("Selecione o Irmão(a) abaixo: ");
 
         jLabel9.setText("Selecione o livro abaixo: ");
 
@@ -363,7 +363,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel7.setText("ATENÇÃO! Preencha os campos \"cliente\" e \"livro\" clicando");
+        jLabel7.setText("ATENÇÃO! Preencha os campos \"Irmão(a)\" e \"livro\" clicando");
 
         jLabel10.setText("no registro,encontrado na área de pesquisa.");
 
@@ -700,11 +700,11 @@ public class JFEmprestimo extends javax.swing.JFrame {
     // Configura campos da tabela de pesquisas de acordo com os campos do Cliente
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Id", "Nome", "CPF"});    
     // Lista de clientes, recebe os registros retornados da pesquisa
-    List<Cliente> clientes;  
+    List<Irmaos> clientes;  
     
     // Lista a quantidade de resultado, de acordo com o nome passado no campo pesquisa
     private void listaContatosCliente() throws SQLException {        
-        BdCliente d = new BdCliente();
+        BdIrmaos d = new BdIrmaos();
         clientes = d.getLista("%" + jTPesquisar.getText() + "%"); 
         
         // Após pesquisar os contatos, executa o método p/ exibir o resultado na tabela pesquisa
@@ -713,7 +713,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
     }
     
     // Mostra a lista de resultado de acordo com o nome passado no campo pesquisa
-    private void mostraPesquisaCliente(List<Cliente> clientes) {
+    private void mostraPesquisaCliente(List<Irmaos> clientes) {
         // Limpa a tabela sempre que for solicitado uma nova pesquisa
         limpaTabelaCliente();
         
@@ -968,7 +968,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
     
     // Passando dados para a janela de multas
     private void passaValor(String valor) throws ParseException, SQLException {
-        enviaValor = new JFMulta();
+        enviaValor = new JFAviso();
         enviaValor.setVisible(true);
         enviaValor.recebe(String.valueOf(diferencaData()), pegaIdCliente());
     }

@@ -153,7 +153,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ID do cliente: "/>
+            <Property name="text" type="java.lang.String" value="ID do Irm&#xe3;o(a): "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -304,7 +304,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="bGPesquisa"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Clientes"/>
+            <Property name="text" type="java.lang.String" value="Irm&#xe3;o(a)"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRLivros">
@@ -366,7 +366,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Selecione o cliente abaixo: "/>
+            <Property name="text" type="java.lang.String" value="Selecione o Irm&#xe3;o(a) abaixo: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
@@ -514,7 +514,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ATEN&#xc7;&#xc3;O! Preencha os campos &quot;cliente&quot; e &quot;livro&quot; clicando"/>
+            <Property name="text" type="java.lang.String" value="ATEN&#xc7;&#xc3;O! Preencha os campos &quot;Irm&#xe3;o(a)&quot; e &quot;livro&quot; clicando"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">

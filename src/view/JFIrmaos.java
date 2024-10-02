@@ -9,15 +9,15 @@ import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.Cliente;
-import utils.BdCliente;
+import model.Irmaos;
+import utils.BdIrmaos;
 
 
 /**
  *
  * @author Nilton Goes @Graziela Fernanda
  */
-public class JFCliente extends javax.swing.JFrame {  
+public class JFIrmaos extends javax.swing.JFrame {  
    
     // Variável que recebe a instância da tela principal
     private JFPrincipal telaPrincipal;
@@ -25,16 +25,16 @@ public class JFCliente extends javax.swing.JFrame {
     /**
      * Creates new form Cliente
      */
-    public JFCliente() {
+    public JFIrmaos() {
         initComponents();
-        setTitle("Biblioteca Igreja Quadrangular Jundiaí Jardim Sta Gertrudes ");
+        setTitle("Biblioteca Igreja Quadrangular Irmão(a) ");
        
         // Desabilita os campos ao iniciar a janela
         desabilitaCampos();
     }
     
     // Construtor reabilita tela principal - recebe a instância
-    JFCliente(JFPrincipal telaPrincipal) {
+    JFIrmaos(JFPrincipal telaPrincipal) {
         
         // this(esta janela 'jFCliente') - abre a própria janela ao execultar o contrutor
         this();
@@ -92,7 +92,7 @@ public class JFCliente extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Clientes"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Irmão(a)"));
 
         jLabel1.setText("Nome:");
 
@@ -196,7 +196,7 @@ public class JFCliente extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Cliente"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Irmão(a)"));
 
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -424,7 +424,7 @@ public class JFCliente extends javax.swing.JFrame {
             // Antes de cadastrar, verifica se os campos foram preenchidos
             if (verificaDados()) {
                 try {
-                    Cliente c = new Cliente();
+                    Irmaos c = new Irmaos();
                     
                     c.setNome(jT1Nome.getText());
                     c.setDataNasc(data());
@@ -433,7 +433,7 @@ public class JFCliente extends javax.swing.JFrame {
                     c.setEndereco(jT5Endereco.getText());
                     c.setFone(jT6Fone.getText());
 
-                    BdCliente d = new BdCliente();
+                    BdIrmaos d = new BdIrmaos();
 
                     d.adicionaCliente(c);
 
@@ -477,13 +477,13 @@ public class JFCliente extends javax.swing.JFrame {
     
     // Edita os campos e colunas da tabela de resultados
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Id", "Nome", "Data Nasc.", "Sexo", "CPF", "Endereço", "Fone"});
-    List<Cliente> clientes;
+    List<Irmaos> clientes;
         
     
     // Lista a quantidade de resultado, de acordo com o nome passado no campo pesquisa
     private void listaContatos() throws SQLException {
         limpaCampos();
-        BdCliente d = new BdCliente();
+        BdIrmaos d = new BdIrmaos();
         clientes = d.getLista("%" + jTPesquisar.getText() + "%"); 
         
         // Após pesquisar os contatos, executa o método p/ exibir o resultado na tabela pesquisa
@@ -492,7 +492,7 @@ public class JFCliente extends javax.swing.JFrame {
     }
     
     // Mostra a lista de resultado de acordo com o nome passado no campo pesquisa
-    private void mostraPesquisa(List<Cliente> clientes) {
+    private void mostraPesquisa(List<Irmaos> clientes) {
         // Limpa a tabela sempre que for solicitado uma nova pesquisa
         limparTabela();
         
@@ -543,7 +543,7 @@ public class JFCliente extends javax.swing.JFrame {
                 // Recebe o ID da linha selecionada
                 int id = (int) jTablePesquisa.getValueAt(linhaSelecionada, 0);
                 // Remove o registro, usando como parâmetro, o id da linha selecionada                
-                BdCliente d = new BdCliente();
+                BdIrmaos d = new BdIrmaos();
                 d.remove(id);
 
                 JOptionPane.showMessageDialog(rootPane, "Registro excluido com sucesso.");
@@ -570,8 +570,8 @@ public class JFCliente extends javax.swing.JFrame {
 
             // Se a confirmação for SIM
             if (resp == JOptionPane.YES_NO_OPTION) {                
-                Cliente c = new Cliente();
-                BdCliente d = new BdCliente();
+                Irmaos c = new Irmaos();
+                BdIrmaos d = new BdIrmaos();
                 
                 c.setId(Integer.valueOf(jT0Id.getText()));
                 c.setNome(jT1Nome.getText());
@@ -655,14 +655,16 @@ public class JFCliente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -670,7 +672,7 @@ public class JFCliente extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new JFCliente().setVisible(true);
+                new JFIrmaos().setVisible(true);
             }
         });
     }    

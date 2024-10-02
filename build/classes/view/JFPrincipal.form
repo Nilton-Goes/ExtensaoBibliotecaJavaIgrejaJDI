@@ -6,12 +6,12 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cliente"/>
+            <Property name="text" type="java.lang.String" value="Irm&#xe3;o(a)"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMCliente">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar Clientes"/>
+                <Property name="text" type="java.lang.String" value="Editar Irm&#xe3;o(a)"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMClienteActionPerformed"/>
@@ -51,12 +51,12 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Multa"/>
+            <Property name="text" type="java.lang.String" value="Avisos"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMMulta">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar Multas"/>
+                <Property name="text" type="java.lang.String" value="Avisar Pend&#xea;ncia"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMMultaActionPerformed"/>

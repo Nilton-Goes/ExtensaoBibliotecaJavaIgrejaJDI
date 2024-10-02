@@ -9,7 +9,7 @@ package model;
  *
  * @author Nilton Goes @Graziela Fernanda
  */
-public class Cliente {
+public class Irmaos {
     
     private int id;
     private String nome;
@@ -19,7 +19,7 @@ public class Cliente {
     private String endereco;
     private String fone;
 
-    public Cliente(String nome, String dataNasc, String sexo, String cpf, String endereco, String fone) {
+    public Irmaos(String nome, String dataNasc, String sexo, String cpf, String endereco, String fone) {
         this.nome = nome;
         this.dataNasc = dataNasc;
         this.sexo = sexo;
@@ -28,7 +28,7 @@ public class Cliente {
         this.fone = fone;
     }
     
-     public Cliente() {
+     public Irmaos() {
     }  
 
     public int getId() {

@@ -11,9 +11,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import utils.BdCliente;
+import utils.BdIrmaos;
 import utils.BdMulta;
-import model.Cliente;
+import model.Irmaos;
 import model.Multa;
 
 
@@ -21,14 +21,14 @@ import model.Multa;
  *
  * @author Nilton Goes @Graziela Fernanda
  */
-public class JFMulta extends javax.swing.JFrame {  
+public class JFAviso extends javax.swing.JFrame {  
        
     /**
      * Creates new form Cliente
      */
-    public JFMulta() {
+    public JFAviso() {
         initComponents();
-        setTitle("Biblioteca Igreja Quadrangular Multa ");
+        setTitle("Biblioteca Igreja Quadrangular Avisos ");
         
         // Desabilita os campos ao iniciar a janela
         desabilitaCampos();   
@@ -84,13 +84,13 @@ public class JFMulta extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Multas"));
 
-        jLabel2.setText("ID do cliente: ");
+        jLabel2.setText("ID do Irmão(a): ");
 
         jLabel3.setText("Descricao");
 
         jLabel4.setText("Valor: R$");
 
-        jLabel5.setText("Dívida Total do Cliente: R$");
+        jLabel5.setText("Dívida Total do Irmão(a): R$");
 
         jCBDescricao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Atraso na devolução", "Livro danificado", "Perda do livro" }));
 
@@ -156,7 +156,7 @@ public class JFMulta extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTableMulta);
 
-        jLabel6.setText("Nome do cliente: ");
+        jLabel6.setText("Nome do Irmão(a): ");
 
         jTableCliente.setModel(tmCliente);
         jTableCliente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,7 +168,7 @@ public class JFMulta extends javax.swing.JFrame {
 
         jLabel8.setText("Selecione a multa abaixo: ");
 
-        jLabel9.setText("Selecione o cliente abaixo: ");
+        jLabel9.setText("Selecione o Irmão(a) abaixo: ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -294,7 +294,7 @@ public class JFMulta extends javax.swing.JFrame {
 
         jLabel7.setText("ATENÇÃO! Para efetuar o pagamento, é necessário ");
 
-        jLabel10.setText("selecionar o campo correspondente ao nome do cliente.");
+        jLabel10.setText("selecionar o campo correspondente ao nome do Irmão(a).");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -491,11 +491,11 @@ public class JFMulta extends javax.swing.JFrame {
     // Configura campos da tabela de pesquisas de acordo com os campos do Cliente
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Id", "Nome", "CPF"});    
     // Lista de clientes, recebe os registros retornados da pesquisa
-    List<Cliente> clientes;  
+    List<Irmaos> clientes;  
     
     // Lista a quantidade de resultado, de acordo com o nome passado no campo pesquisa
     private void listaContatosCliente() throws SQLException {        
-        BdCliente d = new BdCliente();
+        BdIrmaos d = new BdIrmaos();
         clientes = d.getLista("%" + jTPesquisar.getText() + "%"); 
         
         // Após pesquisar os contatos, executa o método p/ exibir o resultado na tabela pesquisa
@@ -504,7 +504,7 @@ public class JFMulta extends javax.swing.JFrame {
     }
     
     // Mostra a lista de resultado de acordo com o nome passado no campo pesquisa
-    private void mostraPesquisaCliente(List<Cliente> clientes) {
+    private void mostraPesquisaCliente(List<Irmaos> clientes) {
         // Limpa a tabela sempre que for solicitado uma nova pesquisa
         limpaTabelaCliente();
         
@@ -726,14 +726,30 @@ public class JFMulta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFMulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFMulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFMulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFMulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAviso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -754,7 +770,7 @@ public class JFMulta extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFMulta().setVisible(true);
+                new JFAviso().setVisible(true);
             }
         });
     }    

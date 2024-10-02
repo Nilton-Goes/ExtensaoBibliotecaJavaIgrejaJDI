@@ -16,7 +16,7 @@ public class JFPrincipal extends javax.swing.JFrame {
      */
     public JFPrincipal() {
         initComponents();
-        setTitle("Biblioteca Igreja Quadrangular Clientes ");
+        setTitle("Biblioteca Igreja Quadrangular ");
        
    }
 
@@ -46,9 +46,9 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utils/imagens/antique-library-302930.jpg"))); // NOI18N
 
-        jMenu2.setText("Cliente");
+        jMenu2.setText("Irmão(a)");
 
-        jMCliente.setText("Editar Clientes");
+        jMCliente.setText("Editar Irmão(a)");
         jMCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMClienteActionPerformed(evt);
@@ -82,9 +82,9 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu7.setText("Multa");
+        jMenu7.setText("Avisos");
 
-        jMMulta.setText("Editar Multas");
+        jMMulta.setText("Avisar Pendência");
         jMMulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMMultaActionPerformed(evt);
@@ -145,7 +145,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         
        // Abre a janela
        // this(Esta janela) - Passa a instancia da tela atual como parâmetro p/ o contrutor
-       new JFCliente(this).setVisible(true);
+       new JFIrmaos(this).setVisible(true);
        
        // Desativa funcionalidades da tabela principal
        this.setEnabled(false);
@@ -167,7 +167,7 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void jMMultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMMultaActionPerformed
         
-        new JFMulta().setVisible(true);
+        new JFAviso().setVisible(true);
         
     }//GEN-LAST:event_jMMultaActionPerformed
 
