@@ -18,10 +18,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import utils.BdIrmaos;
+import utils.BdLocatario;
 import utils.BdEmprestimo;
 import utils.BdLivro;
-import model.Irmaos;
+import model.Locatario;
 import model.Emprestimo;
 import model.Livro;
 
@@ -700,11 +700,11 @@ public class JFEmprestimo extends javax.swing.JFrame {
     // Configura campos da tabela de pesquisas de acordo com os campos do Cliente
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Id", "Nome", "CPF"});    
     // Lista de clientes, recebe os registros retornados da pesquisa
-    List<Irmaos> clientes;  
+    List<Locatario> clientes;  
     
     // Lista a quantidade de resultado, de acordo com o nome passado no campo pesquisa
     private void listaContatosCliente() throws SQLException {        
-        BdIrmaos d = new BdIrmaos();
+        BdLocatario d = new BdLocatario();
         clientes = d.getLista("%" + jTPesquisar.getText() + "%"); 
         
         // Após pesquisar os contatos, executa o método p/ exibir o resultado na tabela pesquisa
@@ -713,7 +713,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
     }
     
     // Mostra a lista de resultado de acordo com o nome passado no campo pesquisa
-    private void mostraPesquisaCliente(List<Irmaos> clientes) {
+    private void mostraPesquisaCliente(List<Locatario> clientes) {
         // Limpa a tabela sempre que for solicitado uma nova pesquisa
         limpaTabelaCliente();
         

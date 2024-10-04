@@ -9,8 +9,8 @@ import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.Irmaos;
-import utils.BdIrmaos;
+import model.Locatario;
+import utils.BdLocatario;
 
 
 /**
@@ -424,7 +424,7 @@ public class JFLocatario extends javax.swing.JFrame {
             // Antes de cadastrar, verifica se os campos foram preenchidos
             if (verificaDados()) {
                 try {
-                    Irmaos c = new Irmaos();
+                    Locatario c = new Locatario();
                     
                     c.setNome(jT1Nome.getText());
                     c.setDataNasc(data());
@@ -433,7 +433,7 @@ public class JFLocatario extends javax.swing.JFrame {
                     c.setEndereco(jT5Endereco.getText());
                     c.setFone(jT6Fone.getText());
 
-                    BdIrmaos d = new BdIrmaos();
+                    BdLocatario d = new BdLocatario();
 
                     d.adicionaCliente(c);
 
@@ -477,13 +477,13 @@ public class JFLocatario extends javax.swing.JFrame {
     
     // Edita os campos e colunas da tabela de resultados
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Id", "Nome", "Data Nasc.", "Sexo", "CPF", "Endereço", "Fone"});
-    List<Irmaos> clientes;
+    List<Locatario> clientes;
         
     
     // Lista a quantidade de resultado, de acordo com o nome passado no campo pesquisa
     private void listaContatos() throws SQLException {
         limpaCampos();
-        BdIrmaos d = new BdIrmaos();
+        BdLocatario d = new BdLocatario();
         clientes = d.getLista("%" + jTPesquisar.getText() + "%"); 
         
         // Após pesquisar os contatos, executa o método p/ exibir o resultado na tabela pesquisa
@@ -492,7 +492,7 @@ public class JFLocatario extends javax.swing.JFrame {
     }
     
     // Mostra a lista de resultado de acordo com o nome passado no campo pesquisa
-    private void mostraPesquisa(List<Irmaos> clientes) {
+    private void mostraPesquisa(List<Locatario> clientes) {
         // Limpa a tabela sempre que for solicitado uma nova pesquisa
         limparTabela();
         
@@ -543,7 +543,7 @@ public class JFLocatario extends javax.swing.JFrame {
                 // Recebe o ID da linha selecionada
                 int id = (int) jTablePesquisa.getValueAt(linhaSelecionada, 0);
                 // Remove o registro, usando como parâmetro, o id da linha selecionada                
-                BdIrmaos d = new BdIrmaos();
+                BdLocatario d = new BdLocatario();
                 d.remove(id);
 
                 JOptionPane.showMessageDialog(rootPane, "Registro excluido com sucesso.");
@@ -570,8 +570,8 @@ public class JFLocatario extends javax.swing.JFrame {
 
             // Se a confirmação for SIM
             if (resp == JOptionPane.YES_NO_OPTION) {                
-                Irmaos c = new Irmaos();
-                BdIrmaos d = new BdIrmaos();
+                Locatario c = new Locatario();
+                BdLocatario d = new BdLocatario();
                 
                 c.setId(Integer.valueOf(jT0Id.getText()));
                 c.setNome(jT1Nome.getText());

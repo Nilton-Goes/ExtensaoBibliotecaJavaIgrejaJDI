@@ -11,19 +11,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Irmaos;
+import model.Locatario;
 
 /**
  *
  * @author Nilton Goes @Graziela Fernanda
  */
-public class BdIrmaos {
+public class BdLocatario {
     
     /* ----CONEXÃO COM O BD-> */
     private Connection conexao;
     
     // Estabelece uma conexão
-    public BdIrmaos() throws SQLException {       
+    public BdLocatario() throws SQLException {       
         this.conexao = CriaConexao.getConexao();
     }
     /* <-CONEXÃO COM O BD---- */
@@ -34,7 +34,13 @@ public class BdIrmaos {
     /* ----CLIENTE-> */
     
     // CREATE - Adiciona um registro
-    public void adicionaCliente(Irmaos c) throws SQLException {
+
+    /**
+     *
+     * @param c
+     * @throws SQLException
+     */
+    public void adicionaCliente(Locatario c) throws SQLException {
         // Prepara conexão p/ receber o comando SQL
         String sql = "INSERT INTO cliente(nome, data_nasc, sexo, cpf, endereco, fone)"
                 + "VALUES(?, ?, ?, ?, ?, ?)";       
@@ -57,7 +63,7 @@ public class BdIrmaos {
     }
     
     // SELECT - Retorna uma lista com o resultado da consulta
-    public List<Irmaos> getLista(String nome) throws SQLException{
+    public List<Locatario> getLista(String nome) throws SQLException{
         // Prepara conexão p/ receber o comando SQL
         String sql = "SELECT * FROM cliente WHERE nome like ?";
         PreparedStatement stmt = this.conexao.prepareStatement(sql);
@@ -66,12 +72,12 @@ public class BdIrmaos {
         // Recebe o resultado da consulta SQL
         ResultSet rs = stmt.executeQuery();
         
-        List<Irmaos> lista = new ArrayList<>();
+        List<Locatario> lista = new ArrayList<>();
         
         // Enquanto existir registros, pega os valores do ReultSet e vai adicionando na lista
         while(rs.next()) {
             //  A cada loop, é instanciado um novo objeto, p/ servir de ponte no envio de registros p/ a lista
-            Irmaos c = new Irmaos();
+            Locatario c = new Locatario();
             
             // "c" -> Cliente novo - .setNome recebe o campo do banco de String "nome" 
             c.setId(Integer.valueOf(rs.getString("id_cliente")));
@@ -97,7 +103,7 @@ public class BdIrmaos {
     }
        
     // UPDATE - Atualiza registros
-    public void altera(Irmaos c) throws SQLException {
+    public void altera(Locatario c) throws SQLException {
         // Prepara conexão p/ receber o comando SQL
         String sql = "UPDATE cliente set nome=?, data_nasc=?, sexo=?, cpf=?, endereco=?, fone=?"
                 + "WHERE id_cliente=?";
