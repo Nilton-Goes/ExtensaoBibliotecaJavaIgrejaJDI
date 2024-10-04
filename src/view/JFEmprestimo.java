@@ -118,7 +118,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
         jLabel1.setText("ID: ");
 
-        jLabel2.setText("ID do Irmão(a): ");
+        jLabel2.setText("ID do Locatário: ");
 
         jLabel3.setText("ID do livro: ");
 
@@ -177,7 +177,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jT0IdEmprestimo, jT1IdCliente, jT2IdLivro, jT3DataEmprestimo, jT4DataDevolucao});
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Empréstimos"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pesquisar Empréstimos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +195,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTableEmprestimo);
 
         bGPesquisa.add(jRClientes);
-        jRClientes.setText("Irmão(a)");
+        jRClientes.setText("Locatário:");
 
         bGPesquisa.add(jRLivros);
         jRLivros.setText("Livros");
@@ -218,7 +218,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jTableCliente);
 
-        jLabel8.setText("Selecione o Irmão(a) abaixo: ");
+        jLabel8.setText("Selecione o Locatário abaixo: ");
 
         jLabel9.setText("Selecione o livro abaixo: ");
 
@@ -363,7 +363,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel7.setText("ATENÇÃO! Preencha os campos \"Irmão(a)\" e \"livro\" clicando");
+        jLabel7.setText("ATENÇÃO! Preencha os campos \"Locatário\" e \"livro\" clicando");
 
         jLabel10.setText("no registro,encontrado na área de pesquisa.");
 

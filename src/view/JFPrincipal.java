@@ -46,9 +46,9 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utils/imagens/antique-library-302930.jpg"))); // NOI18N
 
-        jMenu2.setText("Irmão(a)");
+        jMenu2.setText("Locatário:");
 
-        jMCliente.setText("Editar Irmão(a)");
+        jMCliente.setText("Editar Locatário:");
         jMCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMClienteActionPerformed(evt);
@@ -145,7 +145,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         
        // Abre a janela
        // this(Esta janela) - Passa a instancia da tela atual como parâmetro p/ o contrutor
-       new JFIrmaos(this).setVisible(true);
+       new JFLocatario(this).setVisible(true);
        
        // Desativa funcionalidades da tabela principal
        this.setEnabled(false);

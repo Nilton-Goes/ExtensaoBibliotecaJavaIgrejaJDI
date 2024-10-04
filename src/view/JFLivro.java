@@ -82,7 +82,7 @@ public class JFLivro extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Livros"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados Livros", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jLabel1.setText("Exemplar: ");
 
@@ -156,7 +156,7 @@ public class JFLivro extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Livros"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pesquisar Livros", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {

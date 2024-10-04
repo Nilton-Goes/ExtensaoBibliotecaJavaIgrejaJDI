@@ -6,12 +6,12 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Irm&#xe3;o(a)"/>
+            <Property name="text" type="java.lang.String" value="Locat&#xe1;rio:"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMCliente">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar Irm&#xe3;o(a)"/>
+                <Property name="text" type="java.lang.String" value="Editar Locat&#xe1;rio:"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMClienteActionPerformed"/>

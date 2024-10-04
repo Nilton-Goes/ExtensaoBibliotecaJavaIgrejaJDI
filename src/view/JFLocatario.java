@@ -17,7 +17,7 @@ import utils.BdIrmaos;
  *
  * @author Nilton Goes @Graziela Fernanda
  */
-public class JFIrmaos extends javax.swing.JFrame {  
+public class JFLocatario extends javax.swing.JFrame {  
    
     // Variável que recebe a instância da tela principal
     private JFPrincipal telaPrincipal;
@@ -25,16 +25,16 @@ public class JFIrmaos extends javax.swing.JFrame {
     /**
      * Creates new form Cliente
      */
-    public JFIrmaos() {
+    public JFLocatario() {
         initComponents();
-        setTitle("Biblioteca Igreja Quadrangular Irmão(a) ");
+        setTitle("Biblioteca Igreja Quadrangular Locatário ");
        
         // Desabilita os campos ao iniciar a janela
         desabilitaCampos();
     }
     
     // Construtor reabilita tela principal - recebe a instância
-    JFIrmaos(JFPrincipal telaPrincipal) {
+    JFLocatario(JFPrincipal telaPrincipal) {
         
         // this(esta janela 'jFCliente') - abre a própria janela ao execultar o contrutor
         this();
@@ -92,7 +92,7 @@ public class JFIrmaos extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Irmão(a)"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados Locatário:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jLabel1.setText("Nome:");
 
@@ -196,7 +196,7 @@ public class JFIrmaos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Irmão(a)"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pesquisar Locatário:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -655,14 +655,18 @@ public class JFIrmaos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFLocatario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFLocatario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFLocatario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFIrmaos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFLocatario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -672,7 +676,7 @@ public class JFIrmaos extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new JFIrmaos().setVisible(true);
+                new JFLocatario().setVisible(true);
             }
         });
     }    

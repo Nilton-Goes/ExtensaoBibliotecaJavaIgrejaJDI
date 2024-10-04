@@ -75,7 +75,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Dados Multas"/>
+            <TitledBorder title="Dados Multas">
+              <Font PropertyName="font" name="Segoe UI" size="18" style="1"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -140,7 +142,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ID do Irm&#xe3;o(a): "/>
+            <Property name="text" type="java.lang.String" value="ID do Locat&#xe1;rio: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -181,7 +183,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pesquisar Multas"/>
+            <TitledBorder title="Pesquisar Multas">
+              <Font PropertyName="font" name="Segoe UI" size="18" style="1"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -237,7 +241,7 @@
                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="108" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -274,7 +278,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome do Irm&#xe3;o(a): "/>
+            <Property name="text" type="java.lang.String" value="Nome do Locat&#xe1;rio: "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -303,7 +307,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Selecione o Irm&#xe3;o(a) abaixo: "/>
+            <Property name="text" type="java.lang.String" value="Selecione o Locat&#xe1;rio abaixo: "/>
           </Properties>
         </Component>
       </SubComponents>

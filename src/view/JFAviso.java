@@ -82,9 +82,9 @@ public class JFAviso extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Multas"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados Multas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
-        jLabel2.setText("ID do Irmão(a): ");
+        jLabel2.setText("ID do Locatário: ");
 
         jLabel3.setText("Descricao");
 
@@ -139,7 +139,7 @@ public class JFAviso extends javax.swing.JFrame {
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jT1IdCliente, jT3Valor, jT4ValorTotal});
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisar Multas"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pesquisar Multas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +156,7 @@ public class JFAviso extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTableMulta);
 
-        jLabel6.setText("Nome do Irmão(a): ");
+        jLabel6.setText("Nome do Locatário: ");
 
         jTableCliente.setModel(tmCliente);
         jTableCliente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,7 +168,7 @@ public class JFAviso extends javax.swing.JFrame {
 
         jLabel8.setText("Selecione a multa abaixo: ");
 
-        jLabel9.setText("Selecione o Irmão(a) abaixo: ");
+        jLabel9.setText("Selecione o Locatário abaixo: ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -211,7 +211,7 @@ public class JFAviso extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
